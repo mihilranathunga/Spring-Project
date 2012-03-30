@@ -2,32 +2,33 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package spring;
-import java.util.*;
+
+import java.util.HashMap;
+import java.util.Iterator;
 
 /**
  *
  * @author 100444N - Mihil Ranathunga
  */
-public class SimpleStudentRepository implements StudentRepository{
+public class SimpleStudentRepository implements StudentRepository {
 
     HashMap<String, Student> map;
 
-    public SimpleStudentRepository(){
+    public SimpleStudentRepository() {
         map = new HashMap<String, Student>();
     }
 
-    public void save(String stuNum,Student newStudent){
+    public void save(String stuNum, Student newStudent) {
         map.put(stuNum, newStudent);
     }
 
-    public Student find(String stuNum){
+    public Student find(String stuNum) {
         return map.get(stuNum);
     }
 
     public void update(String key, Student repStudent) {
-        
+
         map.remove(key);
         map.put(key, repStudent);
     }
@@ -39,6 +40,4 @@ public class SimpleStudentRepository implements StudentRepository{
     public Iterator<Student> fetchUsers() {
         return (map.values()).iterator();
     }
-
-
 }
