@@ -36,5 +36,9 @@ public class SimpleStudentRepository implements StudentRepository{
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
+    public Iterator<Student> fetchUsers() {
+        return (map.values()).iterator();
+    }
+
 
 }

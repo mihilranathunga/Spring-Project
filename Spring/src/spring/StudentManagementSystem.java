@@ -5,6 +5,8 @@
 
 package spring;
 
+import java.util.Iterator;
+
 /**
  *
  * @author 100444N - Mihil Ranathunga
@@ -18,14 +20,14 @@ public class StudentManagementSystem implements StudentRepository{
 
     public StudentManagementSystem() {
         
-        this.stuDb = new SimpleStudentRepository();
+        setStuDb(new SimpleStudentRepository());
+    }
+
+    public void setStuDb(SimpleStudentRepository stuDb) {
+        this.stuDb = stuDb;
     }
     
     
-    
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
 
     public void save(String stunum, Student newStudent) {
         
@@ -65,6 +67,15 @@ public class StudentManagementSystem implements StudentRepository{
         System.out.println();
         System.out.println("Student Address     : "+stu.getAddress());
         System.out.println("***************************************************");
+    }
+
+    public void fetchUsers() {
+        
+         Iterator<Student> students = stuDb.fetchUsers();
+        while(students.hasNext())
+        {
+            displayStudentData((students.next()).getRegNumber());
+        }
     }
 
 }
