@@ -8,7 +8,7 @@ import java.util.*;
 
 /**
  *
- * @author 100440A
+ * @author 100444N - Mihil Ranathunga
  */
 public class SimpleStudentRepository implements StudentRepository{
 
@@ -18,12 +18,22 @@ public class SimpleStudentRepository implements StudentRepository{
         map = new HashMap<String, Student>();
     }
 
-    public void addUser(String stunum,Student newStudent){
-        map.put(stunum, newStudent);
+    public void save(String stuNum,Student newStudent){
+        map.put(stuNum, newStudent);
     }
 
-    public Student find(String stnum){
-        return map.get(stnum);
+    public Student find(String stuNum){
+        return map.get(stuNum);
+    }
+
+    public void update(String key, Student repStudent) {
+        
+        map.remove(key);
+        map.put(key, repStudent);
+    }
+
+    public void edit(String key) {
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
 

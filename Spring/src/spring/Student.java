@@ -6,33 +6,33 @@
 package spring;
 /**
  *
- * @author 100440A
+ * @author 100444N - Mihil Ranathunga
  */
 public class Student {
-    private String firstname;
-    private String lastname;
-    private String regnum;
+    private String firstName;
+    private String lastName;
+    private String regNum;
     private String address;
 
     Student(String inFirName,String inLasName,String regNumber,String addr){
-        firstname = inFirName;
-        lastname = inLasName;
-        regnum   = regNumber;
+        firstName = inFirName;
+        lastName = inLasName;
+        regNum   = regNumber;
         address  = addr;
     }
 
     public String getFirstName(){
 
-        return firstname;
+        return firstName;
     }
     public String getLastName(){
 
-        return lastname;
+        return lastName;
     }
 
     public String getRegNumber(){
 
-        return regnum;
+        return regNum;
     }
 
     public String getAddress(){
