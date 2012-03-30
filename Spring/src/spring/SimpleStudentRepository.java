@@ -13,7 +13,8 @@ import java.util.Iterator;
  */
 public class SimpleStudentRepository implements StudentRepository {
 
-    HashMap<String, Student> map;
+    private HashMap<String, Student> map;
+
 
     public SimpleStudentRepository() {
         map = new HashMap<String, Student>();

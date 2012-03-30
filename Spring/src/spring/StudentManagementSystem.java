@@ -68,7 +68,7 @@ public class StudentManagementSystem implements StudentRepository {
         System.out.println("***************************************************");
     }
 
-    public void fetchUsers() {
+    public void displayAllUsers() {
 
         Iterator<Student> students = stuDb.fetchUsers();
         while (students.hasNext()) {

@@ -4,8 +4,12 @@
  */
 package spring;
 
-import org.junit.*;
-import static org.junit.Assert.*;
+import java.util.HashMap;
+import java.util.Iterator;
+import org.junit.After;
+import static org.junit.Assert.assertEquals;
+import org.junit.Before;
+import org.junit.Test;
 
 /**
  *
@@ -13,38 +17,27 @@ import static org.junit.Assert.*;
  */
 public class SimpleStudentRepositoryTest {
     
+    SimpleStudentRepository instance;
+    Student student;
+    
     public SimpleStudentRepositoryTest() {
     }
 
-    @BeforeClass
-    public static void setUpClass() throws Exception {
-    }
-
-    @AfterClass
-    public static void tearDownClass() throws Exception {
-    }
     
     @Before
     public void setUp() {
+        
+        instance = new SimpleStudentRepository();
+        student = new Student("Mihil","Ranathunga","100444N","Gampaha");  
+        instance.save("100444N",student);
+        
     }
     
     @After
     public void tearDown() {
     }
 
-    /**
-     * Test of save method, of class SimpleStudentRepository.
-     */
-    @Test
-    public void testSave() {
-        System.out.println("save");
-        String stuNum = "";
-        Student newStudent = null;
-        SimpleStudentRepository instance = new SimpleStudentRepository();
-        instance.save(stuNum, newStudent);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
+ 
 
     /**
      * Test of find method, of class SimpleStudentRepository.
@@ -52,39 +45,14 @@ public class SimpleStudentRepositoryTest {
     @Test
     public void testFind() {
         System.out.println("find");
-        String stuNum = "";
-        SimpleStudentRepository instance = new SimpleStudentRepository();
-        Student expResult = null;
+        String stuNum = student.getRegNumber();
         Student result = instance.find(stuNum);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(student, result);
+
     }
 
-    /**
-     * Test of update method, of class SimpleStudentRepository.
-     */
-    @Test
-    public void testUpdate() {
-        System.out.println("update");
-        String key = "";
-        Student repStudent = null;
-        SimpleStudentRepository instance = new SimpleStudentRepository();
-        instance.update(key, repStudent);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
 
-    /**
-     * Test of edit method, of class SimpleStudentRepository.
-     */
-    @Test
-    public void testEdit() {
-        System.out.println("edit");
-        String key = "";
-        SimpleStudentRepository instance = new SimpleStudentRepository();
-        instance.edit(key);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
+  
+
+    
 }
