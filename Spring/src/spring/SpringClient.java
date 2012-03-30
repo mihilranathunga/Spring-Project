@@ -4,7 +4,6 @@
  */
 package spring;
 
-import java.util.Iterator;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -35,7 +34,9 @@ public class SpringClient {
            
            sms.registerNewStudent("Mihil","Ranathunga","100444N","21/180 , Rathmal Gardens , Imbulgoda");
            sms.registerNewStudent("Sampath","Liyanage","100476M","No. 90 , Mawanella");
-           sms.registerNewStudent("Mihiri","Guthunga","100217","17/80 , Boralasgamuwa");
+           sms.registerNewStudent("Mihiri","Guthunga","100167R","17/80 , Ambalangoda");
+           sms.registerNewStudent("Samiththa","Bhashini","100059M","No :7 , Mathara");
+           sms.registerNewStudent("Tharindu","Ranasinghe","100440A","No : 666 , Veyangoda");
            
            client.fetchUsers();
            
