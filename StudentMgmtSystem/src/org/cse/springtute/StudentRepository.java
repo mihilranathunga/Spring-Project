@@ -4,7 +4,7 @@
  */
 package org.cse.springtute;
 
-import java.util.Iterator;
+import java.util.List;
 
 /**
  *
@@ -20,5 +20,5 @@ public interface StudentRepository {
 
     public Student findStudent(String stuNum);
     
-    public Iterator<Student> findAllStudents();
+    public List<Student> findAllStudents();
 }

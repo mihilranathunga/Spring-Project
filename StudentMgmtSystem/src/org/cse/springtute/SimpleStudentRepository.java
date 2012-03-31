@@ -4,8 +4,9 @@
  */
 package org.cse.springtute;
 
+import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
+import java.util.List;
 
 /**
  *
@@ -41,8 +42,8 @@ public class SimpleStudentRepository implements StudentRepository {
         map.remove(regNum);
     }
 
-    public Iterator<Student> findAllStudents() {
-        return (map.values()).iterator();
+    public List<Student> findAllStudents() {
+        return (List)(new ArrayList(map.values()));
     }
 
   

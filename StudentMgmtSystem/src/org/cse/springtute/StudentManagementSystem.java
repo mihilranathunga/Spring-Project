@@ -24,6 +24,14 @@ public class StudentManagementSystem {
 
     public final void setStuDb(SimpleStudentRepository stuDb) {
         this.stuDb = stuDb;
+        
+    }
+    public boolean checkStudb(SimpleStudentRepository stuDb){
+               if(this.stuDb == stuDb){
+            return true;
+        }
+        else
+            return false;
     }
 
 
@@ -37,7 +45,7 @@ public class StudentManagementSystem {
 
     public void listAllStudentData() {
 
-        Iterator<Student> stu = stuDb.findAllStudents();
+        Iterator<Student> stu = (stuDb.findAllStudents()).iterator();
 
         System.out.println();
         System.out.println("***************************************************");
