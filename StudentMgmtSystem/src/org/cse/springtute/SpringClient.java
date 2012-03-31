@@ -24,7 +24,7 @@ public class SpringClient {
        private void fetchUsers()
     {
 
-            sms.displayAllUsers();
+            sms.listAllStudentData();
     }
        
        public static void main(String [] args){
@@ -38,8 +38,7 @@ public class SpringClient {
            sms.registerNewStudent("Samiththa","Bhashini","100059M","No :7 , Mathara");
            sms.registerNewStudent("Tharindu","Ranasinghe","100440A","No : 666 , Veyangoda");
            
-           System.out.println();
-           System.out.println("Application Showing all the student Ragistrations ..........");
+           
            
            client.fetchUsers();
            

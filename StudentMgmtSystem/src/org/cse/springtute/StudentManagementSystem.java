@@ -42,10 +42,21 @@ public class StudentManagementSystem {
         System.out.println();
         System.out.println("***************************************************");
         System.out.println();
-        System.out.println("Student Reg. Number : " + stu.getRegNumber());
-        System.out.println("Student Name        : " + stu.getFirstName() + " " + stu.getLastName());
+        System.out.println("Application Showing all the student Ragistrations ..........");
         System.out.println();
-        System.out.println("Student Address     : " + stu.getAddress());
+        while(stu.hasNext()){
+            
+            Student student = stu.next();
+            
+        System.out.println("Student Reg. Number : " + student.getRegNumber());
+        System.out.println("Student Name        : " + student.getFirstName() + " " + student.getLastName());
+        System.out.println();
+        System.out.println("Student Address     : " + student.getAddress());
+        System.out.println();
+        System.out.println("           ----------------------------------------------          ");
+        System.out.println();
+        
+        }
         System.out.println("***************************************************");
     }
 
