@@ -1,18 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
- xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
  
     <bean id="sms" class="org.cse.springtute.StudentManagementSystem">
-    <property name="stuDb"><ref bean="stuDB"/></property>
+        <property name="stuDb">
+            <ref bean="stuDB"/>
+        </property>
     </bean>
-    <bean id="student" class="org.cse.springtute.Student">
+    <bean id="mihil" class="org.cse.springtute.Student">
         
-        <constructor-arg type="java.lang.String"><value>studentDetails</value></constructor-arg>
-        <constructor-arg type="java.lang.String"><value>studentDetails</value></constructor-arg>
-        <constructor-arg type="java.lang.String"><value>studentDetails</value></constructor-arg>
-        <constructor-arg type="java.lang.String"><value>studentDetails</value></constructor-arg>
+        <constructor-arg type="java.lang.String">
+            <value>Mihil</value>
+        </constructor-arg>
+        <constructor-arg type="java.lang.String">
+            <value>Ranathunga</value>
+        </constructor-arg>
+        <constructor-arg type="java.lang.String">
+            <value>100444N</value>
+        </constructor-arg>
+        <constructor-arg type="java.lang.String">
+            <value>No. 21/180 , Rathmal Uyana, Imbulgoda</value>
+        </constructor-arg>
         
-        </bean>
+     
+    </bean>
+    <bean id="sampath" class="org.cse.springtute.Student">
+        
+        <constructor-arg type="java.lang.String">
+            <value>P.L.B.</value>
+        </constructor-arg>
+        <constructor-arg type="java.lang.String">
+            <value>Sampath</value>
+        </constructor-arg>
+        <constructor-arg type="java.lang.String">
+            <value>100476N</value>
+        </constructor-arg>
+        <constructor-arg type="java.lang.String">
+            <value>No. 12,Kadurugas owita Rd.,Mawanella</value>
+        </constructor-arg>
+ 
+    </bean>
+    <bean id="vimuth" class="org.cse.springtute.Student">
+        
+        <constructor-arg type="java.lang.String">
+            <value>Vimuth</value>
+        </constructor-arg>
+        <constructor-arg type="java.lang.String">
+            <value>Fernando</value>
+        </constructor-arg>
+        <constructor-arg type="java.lang.String">
+            <value>100132G</value>
+        </constructor-arg>
+        <constructor-arg type="java.lang.String">
+            <value>No. 176/A,Dehipitiya Rd.,Pannala.</value>
+        </constructor-arg>
+ 
+    </bean>
     <bean id="stuDB" class= "org.cse.springtute.SimpleStudentRepository"/>
-    </beans>
+</beans>

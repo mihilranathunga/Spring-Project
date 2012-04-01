@@ -14,37 +14,38 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class SpringClient {
 
     private static StudentManagementSystem sms;
+    private static ApplicationContext context;
 
     public SpringClient() {
-        ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-         sms = (StudentManagementSystem) context.getBean("sms");
- 
+        context = new ClassPathXmlApplicationContext("spring-context.xml");
+        sms = (StudentManagementSystem) context.getBean("sms");
+
     }
-    
-       private void fetchUsers()
-    {
 
-            sms.listAllStudentData();
+    private void fetchUsers() {
+
+        sms.listAllStudentData();
     }
-       
-       public static void main(String [] args){
-           
-           SpringClient client = new SpringClient();
-           
-           
-           sms.registerNewStudent("Mihil","Ranathunga","100444N","21/180 , Rathmal Gardens , Imbulgoda");
-           sms.registerNewStudent("Sampath","Liyanage","100476M","No. 90 , Mawanella");
-           sms.registerNewStudent("Mihiri","Guthunga","100167R","17/80 , Ambalangoda");
-           sms.registerNewStudent("Samiththa","Bhashini","100059M","No :7 , Mathara");
-           sms.registerNewStudent("Tharindu","Ranasinghe","100440A","No : 666 , Veyangoda");
-           
-           
-           
-           client.fetchUsers();
-           
-       }
 
+    public static void main(String[] args) {
 
-    
-    
+        SpringClient client = new SpringClient();
+
+        Student mihil = (Student) context.getBean("mihil");
+        Student sampath = (Student) context.getBean("sampath");
+        Student vimuth = (Student) context.getBean("vimuth");
+
+        sms.registerNewStudent(mihil);
+        sms.registerNewStudent(sampath);
+        sms.registerNewStudent(vimuth);
+
+        client.fetchUsers();
+
+        sms.registerNewStudent("Isuri", "Subasinghe", "100521A", "No. 1, Cul De Sac , Katunayake");
+        sms.registerNewStudent("Tharindu", "Ranasinghe", "100440A", "No : 666 , Veyangoda");
+        sms.registerNewStudent("Mihiri", "Guthunga", "100167R", "17/80 , Ambalangoda");
+        sms.registerNewStudent("Samiththa", "Bhashini", "100059M", "No :7 , Mathara");
+
+        client.fetchUsers();
+    }
 }

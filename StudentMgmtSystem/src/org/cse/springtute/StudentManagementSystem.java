@@ -42,6 +42,11 @@ public class StudentManagementSystem {
         stuDb.saveStudent(newEntree);
 
     }
+     public void registerNewStudent(Student stu) {
+
+        stuDb.saveStudent(stu);
+
+    }
 
     public void listAllStudentData() {
 
@@ -68,6 +73,7 @@ public class StudentManagementSystem {
         System.out.println("***************************************************");
     }
 
+  
 
     }
 

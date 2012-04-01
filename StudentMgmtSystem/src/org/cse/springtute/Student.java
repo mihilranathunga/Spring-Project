@@ -15,6 +15,8 @@ public class Student {
     private String regNum;
     private String address;
 
+
+
     Student(String inFirName, String inLasName, String regNumber, String addr) {
         firstName = inFirName;
         lastName = inLasName;
