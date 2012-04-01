@@ -11,5 +11,9 @@
 
 	After that Later New Project has been created by Modifying existing project according to sample project
 
+	
+	New Improved version including predefined student beans pushed.
 
-	Successfull @ 11.31 AM (Note : a slight problem in test cases, but nevertheless passed)
+	New version has defined student beans in the system adn it can register new students as well
+
+	uses constructor injection to initialize student attributes.
