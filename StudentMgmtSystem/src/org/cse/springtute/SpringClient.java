@@ -34,11 +34,16 @@ public class SpringClient {
         Student mihil = (Student) context.getBean("mihil");
         Student sampath = (Student) context.getBean("sampath");
         Student vimuth = (Student) context.getBean("vimuth");
+        
+        StudentRepository db = (StudentRepository) context.getBean("stuDB");
 
-        sms.registerNewStudent(mihil);
-        sms.registerNewStudent(sampath);
+                db.saveStudent(mihil);
+                db.saveStudent(sampath);
+
+        client.fetchUsers();
+        
         sms.registerNewStudent(vimuth);
-
+        
         client.fetchUsers();
 
         sms.registerNewStudent("Isuri", "Subasinghe", "100521A", "No. 1, Cul De Sac , Katunayake");
